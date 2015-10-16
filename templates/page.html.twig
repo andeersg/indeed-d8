@@ -48,11 +48,13 @@
  */
 #}
 <header class="branding">
-  {{ page.header }}
-  {{ page.primary_menu }}
+  <div class="wrapper">
+    {{ page.header }}
+    {{ page.primary_menu }}
+  </div>
 </header>
 
-<div class="content">
+<div class="content wrapper">
   {% if page.highlighted %}
     <div class="highlighted">
       <aside class="layout-container section clearfix" role="complementary">
@@ -82,7 +84,7 @@
 
 {% if page.footer %}
 <footer class="site-footer">
-  <div class="layout-container">
+  <div class="wrapper">
       <div class="site-footer__top clearfix">
         {{ page.footer }}
       </div>
