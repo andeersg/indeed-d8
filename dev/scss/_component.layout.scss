@@ -1,7 +1,86 @@
 .wrapper {
   width: 100%;
   max-width: 1000px;
-  padding: 0 20px;
+  padding: 0;
   margin-left: auto;
   margin-right: auto;
+}
+
+
+.branding {
+  padding-top: 30px;
+  padding-bottom: 30px;
+  background-color: #fff;
+
+  box-shadow: 0 0 2px rgba(51, 51, 51, 0.3);
+  
+  &__logo {
+    display: inline-block;
+  }
+  &__title {
+    display: inline-block;
+  }
+  &__slogan {
+    display: inline-block;
+  }
+}
+
+.content {
+  padding: 10px 0px;
+}
+
+.credits {
+  background-color: #f9f9f9;
+  padding: 20px;
+}
+
+
+.block-indeed-branding {
+  width: 30%;
+  float: left;
+}
+.nav--primary {
+  width: 70%;
+  float: left;
+  font-size: 18px;
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  li {
+    display: inline-block;
+    height: 69px;
+    line-height: 69px;
+  }
+  a {
+    height: inherit;
+    line-height: inherit;
+    display: inline-block;
+  }
+}
+
+.area {
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+.main-content {
+  width: 64%;
+  float: left;
+}
+.sidebar {
+  width: 33%;
+  float: right;
+  .block {
+    background-color: #fff;
+    padding: 10px;
+    margin-bottom: 30px;
+  }
+}
+
+
+// @todo Quickfix, should find out if it can be avoided.
+.js-quickedit-page-title {
+  margin: 0;
 }

@@ -1,0 +1,43 @@
+<?php
+
+/**
+ * @file
+ * Functions to support theming in the Indeed theme.
+ */
+
+//use Drupal\Component\Utility\Xss;
+//use Drupal\Core\Template\Attribute;
+
+/**
+ * Implements hook_preprocess_HOOK() for HTML document templates.
+ */
+function indeed_preprocess_html(&$variables) {
+  //drupal_set_message(t('Oh nohes, this is not right?'), 'error');
+  //drupal_set_message(t('I think this is right?'), 'status');
+}
+
+/**
+ * Implements hook_preprocess_HOOK() for HTML document templates.
+ */
+function indeed_preprocess_status_messages(&$variables) {
+  //dpm($variables);
+}
+
+/**
+ * Implements hook_preprocess_HOOK() for HTML document templates.
+ */
+function indeed_preprocess_block(&$variables) {
+  $variables['attributes']['class'][] = $variables['attributes']['id'];
+  $variables['attributes']['class'][] = 'block';
+  switch ($variables['plugin_id']) {
+    case 'system_menu_block:main':
+      $variables['attributes']['class'][] = 'nav--primary';
+      break;
+  }
+}
+
+/*
+function indeed_theme_suggestions_alter(&$suggestions, $variables, $hook) {
+  dpm($variables);
+}
+*/

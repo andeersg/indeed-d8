@@ -1,12 +1,125 @@
+* {
+  box-sizing: border-box; }
+
 body {
-  background-color: #fff;
   padding: 0;
   margin: 0;
-  font-family: 'Helvetica Neue', Helvetica, sans-serif; }
+  font-family: 'Helvetica Neue', Helvetica, sans-serif;
+  font-size: 14px;
+  line-height: 23px;
+  color: #333;
+  background-color: #f4f4f4; }
+
+h1 {
+  font-weight: 300;
+  font-size: 32px; }
+
+h2 {
+  font-weight: 300;
+  font-size: 27px; }
+
+h1 a,
+h2 a,
+h3 a {
+  text-decoration: none;
+  color: inherit; }
+
+a {
+  color: #f98f05;
+  text-decoration: none; }
 
 .wrapper {
   width: 100%;
   max-width: 1000px;
-  padding: 0 20px;
+  padding: 0;
   margin-left: auto;
   margin-right: auto; }
+
+.branding {
+  padding-top: 30px;
+  padding-bottom: 30px;
+  background-color: #fff;
+  box-shadow: 0 0 2px rgba(51, 51, 51, 0.3); }
+  .branding__logo {
+    display: inline-block; }
+  .branding__title {
+    display: inline-block; }
+  .branding__slogan {
+    display: inline-block; }
+
+.content {
+  padding: 10px 0px; }
+
+.credits {
+  background-color: #f9f9f9;
+  padding: 20px; }
+
+.block-indeed-branding {
+  width: 30%;
+  float: left; }
+
+.nav--primary {
+  width: 70%;
+  float: left;
+  font-size: 18px; }
+  .nav--primary ul {
+    list-style: none;
+    padding: 0;
+    margin: 0; }
+  .nav--primary li {
+    display: inline-block;
+    height: 69px;
+    line-height: 69px; }
+  .nav--primary a {
+    height: inherit;
+    line-height: inherit;
+    display: inline-block; }
+
+.area {
+  padding-top: 30px;
+  padding-bottom: 30px; }
+
+.main-content {
+  width: 64%;
+  float: left; }
+
+.sidebar {
+  width: 33%;
+  float: right; }
+  .sidebar .block {
+    background-color: #fff;
+    padding: 10px;
+    margin-bottom: 30px; }
+
+.js-quickedit-page-title {
+  margin: 0; }
+
+.node__title {
+  margin-top: 0;
+  margin-bottom: 5px;
+  font-weight: 400;
+  font-size: 28px;
+  line-height: 32px; }
+
+.node__meta {
+  color: #515151;
+  padding-bottom: 20px;
+  font-size: 13px; }
+
+.node--view-mode-teaser {
+  background-color: #fff;
+  padding: 20px;
+  border-bottom: 2px solid rgba(0, 0, 0, 0.05);
+  margin-bottom: 30px; }
+
+.message--status {
+  background-color: #44df47; }
+
+.message--error {
+  background-color: #e13f3f; }
+
+.clearfix:after,
+.wrapper:after {
+  content: '';
+  clear: both;
+  display: table; }

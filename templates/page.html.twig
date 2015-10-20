@@ -47,14 +47,10 @@
  * @see html.html.twig
  */
 #}
-<header class="branding">
-  <div class="wrapper">
-    {{ page.header }}
-    {{ page.primary_menu }}
-  </div>
-</header>
 
-<div class="content wrapper">
+<div class="wrapper">
+  {{ page.header }}
+
   {% if page.highlighted %}
     <div class="highlighted">
       <aside class="layout-container section clearfix" role="complementary">
@@ -63,31 +59,22 @@
     </div>
   {% endif %}
 
-  {{ page.breadcrumb }}
-
-  <div class="area">
-    <main id="content" class="column main-content" role="main">
-      <section class="section">
-        <a id="main-content" tabindex="-1"></a>
-        {{ page.content }}
-      </section>
-    </main>
+  <div class="area clearfix">
+    <section id="content" class="main-content" role="main">
+      <a id="main-content" tabindex="-1"></a>
+      {{ page.content }}
+    </section>
     {% if page.sidebar %}
-      <div id="sidebar-first" class="column sidebar">
-        <aside class="section" role="complementary">
-          {{ page.sidebar }}
-        </aside>
-      </div>
+      <aside class="section sidebar" role="complementary">
+        {{ page.sidebar }}
+      </aside>
     {% endif %}
   </div>
-</div>
 
-{% if page.footer %}
-<footer class="site-footer">
-  <div class="wrapper">
-      <div class="site-footer__top clearfix">
-        {{ page.footer }}
-      </div>
-  </div>
-</footer>
-{% endif %}
+  {% if page.footer %}
+  <footer class="credits">
+    {{ page.footer }}
+  </footer>
+  {% endif %}
+
+</div>

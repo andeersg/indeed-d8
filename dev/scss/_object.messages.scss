@@ -1,0 +1,9 @@
+.message {
+  &--status {
+    background-color: #44df47;
+  }
+  &--error {
+    background-color: #e13f3f;
+  }
+  &--warning {}
+}

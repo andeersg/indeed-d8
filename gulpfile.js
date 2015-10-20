@@ -2,6 +2,8 @@ var gulp = require('gulp');
 var sass = require('gulp-sass');
 var autoprefixer = require('gulp-autoprefixer');
 var jshint = require('gulp-jshint');
+var exec = require('child_process').exec;
+
 
 gulp.task('css', function () {
   return gulp.src('dev/scss/**/*.scss')
@@ -16,6 +18,14 @@ gulp.task('js', function() {
     .pipe(jshint.reporter('jshint-stylish'))
     .pipe(gulp.dest('assets/js'));
 });
+ 
+gulp.task('drushcr', function (cb) {
+  exec('drush cr', function (err, stdout, stderr) {
+    console.log(stdout);
+    console.log(stderr);
+    cb(err);
+  });
+})
 
 // Default task
 gulp.task('default', ['css', 'js']); // , 'images'
@@ -28,4 +38,7 @@ gulp.task('watch', function() {
 
   // Watch .js files
   gulp.watch('dev/js/*.js', ['js']);
+
+  // Watch twig files
+  gulp.watch(['templates/**/*.twig', '*.theme'], ['drushcr']);
 });
